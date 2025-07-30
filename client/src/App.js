@@ -39,7 +39,7 @@ function App() {
 
   // Fetch items from backend
   const fetchItems = async () => {
-    const res = await axios.get('https://price-compare-app.onrender.com');
+    const res = await axios.get('https://price-compare-app.onrender.com/api/items');
     setItems(res.data);
   };
 
@@ -52,7 +52,7 @@ function App() {
     e.preventDefault();
     if (!name || !store || !price) return;
 
-    await axios.post('https://price-compare-app.onrender.com', {
+    await axios.post('https://price-compare-app.onrender.com/api/items', {
       name,
       store,
       price: parseFloat(price)
