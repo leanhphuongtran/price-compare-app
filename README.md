@@ -1,14 +1,20 @@
-# 🛍️ Price Compare App
+# 🛒 Price Compare App
 
 A full-stack MERN(MongoDB, Express, React, Node.js) web app to help users track and compare prices of items across different stores.
+A web app to compare item prices across different stores. You can add, view, and update price data easily on desktop or mobile!
 
-🌐 **Live Website:** [https://price-compare-app-five.vercel.app/](https://price-compare-app-five.vercel.app/)
+🌐 **Live Demo**
+- Frontend: [https://price-compare-app-five.vercel.app/](https://price-compare-app-five.vercel.app/)
+- Backend API: [price-compare-app.onrender.com](https://price-compare-app.onrender.com)
 
 
 ---
 
-## 🚀 Features
-
+## 📱 Features
+- Fully working web app
+- Online backend
+- Live MongoDB database
+- Usable on any device
 - Add new products and their price at different stores
 - View a list of saved items
 - Compare prices quickly
@@ -30,11 +36,12 @@ A full-stack MERN(MongoDB, Express, React, Node.js) web app to help users track 
 | Frontend    | React, HTML, CSS              |
 | Backend     | Node.js, Express              |
 | Database    | MongoDB (Cloud Atlas)         |
-| Deployment  | Vercel (frontend), local dev for backend |
+| Deployment  | Vercel (frontend), Render (backend) |
 
 ---
 
-## 🧑‍💻 How to Run Locally
+## 🧑‍💻 How to Run Locally (Optional)
+> Only if developers want to run the app on their machines
 
 # Clone this repo
 git clone https://github.com/leanhphuongtran/price-compare-app.git
@@ -45,15 +52,10 @@ cd server
 npm install
 npm run dev
 
-# In a new terminal, run client, start the frontend React app
+# In a new terminal, start the frontend React app
 cd ../client
 npm install
 npm start
-
----
-
-🧠 What I Learned
-What I learned during the project: connecting frontend to backend, using React hooks, deploying with Vercel.
 
 ---
 
@@ -70,6 +72,10 @@ price-compare-app/
 ├── package.json
 └── README.md
 
+---
+
+## 🧠 What I Learned
+What I learned during the project: connecting frontend to backend, using React hooks, deploying with Vercel.
 ---
 
 👤 Author
