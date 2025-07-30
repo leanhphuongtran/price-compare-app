@@ -5,7 +5,7 @@ A web app to compare item prices across different stores. You can add, view, and
 
 🌐 **Live Demo**
 - Frontend: [https://price-compare-app-five.vercel.app/](https://price-compare-app-five.vercel.app/)
-- Backend API: [price-compare-app.onrender.com](https://price-compare-app.onrender.com)
+- Backend API: [https://price-compare-app.onrender.com](https://price-compare-app.onrender.com/api/items)
 
 
 ---
