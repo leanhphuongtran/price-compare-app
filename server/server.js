@@ -28,17 +28,25 @@ let items = []; // TEMPORARY in-memory data
 app.post ('/api/items', async(req, res) => {
     try {
         const { name, store, price } = req.body;
-        const newItem = { name, store, price: parseFloat(price) };
-        items.push(newItem);
+
+        // ✅ Create a new item using the Mongoose model
+        // This saves the item into MongoDB. Not just temporary memory anymore 💾
+        const newItem = new Item({ name, store, price: parseFloat(price)});
+
+        // ✅ Save it to MongoDB
+        await newItem.save();
+
         res.status(201).json(newItem);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 });
 
+
 // Handle GET (show/return all saved items)
 app.get ('/api/items', async(req, res) => {
     try {
+        // This fetches saved items directly from MongoDB
         const items = await Item.find();
         res.json(items);
     } catch (err) {
@@ -46,6 +54,9 @@ app.get ('/api/items', async(req, res) => {
     }
 });
 
+
+// '0.0.0.0' makes the server publicly accessible from outside
+// which is perfect for deployment on Render.com
 app.listen (PORT, '0.0.0.0' , () => {
     console.log(`Server is running on http://localhost:${PORT}`)
 });
